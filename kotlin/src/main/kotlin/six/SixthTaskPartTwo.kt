@@ -1,11 +1,14 @@
 package six
 
 fun main() {
-    println(checkEvenAndOddNumbersFromValueIsEqual(2333221))
+    println(checkEvenAndOddNumbersFromValueIsEqual(0))
 }
 
 
 private fun checkEvenAndOddNumbersFromValueIsEqual(number: Int): Boolean {
+    if (number.toString().length == 1){
+        throw IllegalArgumentException("в числе нету цифр на четных позициях")
+    }
     val numbers = mapNumberToNumbersArray(number)
     val evenNumbers = mutableListOf<Int>()
     val oddNumbers = mutableListOf<Int>()
