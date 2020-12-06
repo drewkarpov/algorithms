@@ -5,7 +5,7 @@ fun main() {
 }
 
 
-fun checkEnteredNumberIsEqualKey(twoCharsNumber: Int, key: Int): Boolean {
+private fun checkEnteredNumberIsEqualKey(twoCharsNumber: Int, key: Int): Boolean {
     if (twoCharsNumber.toString().length == 2) {
         val numbers = mapNumberToNumbersArray(twoCharsNumber)
         if (numbers[0] + numbers[1] == key || numbers[0] == numbers[1]) {
